@@ -177,10 +177,11 @@
                 <section class="github section">
                     <div class="section-inner">
                         <h2 class="heading">My GitHub</h2>
-                        <p>You can embed your GitHub activities using Casey Scarborough's <a href="http://caseyscarborough.com/projects/github-activity/" target="_blank">GitHub Activity Stream</a> widget. You can also take a screenshot of your GitHub chart and put it here for fun.</p>
-                        <p><a href="#"><img class="img-responsive" src="assets/images/github-chart.png" alt="GitHub Contributions Chart" /></a></p>               
-                        <!--//Usage: http://caseyscarborough.com/projects/github-activity/ -->                       
-                        <div id="ghfeed" class="ghfeed">
+                        
+                        <p><a href="https://github.com/marcsdev?tab=repositories" target="_blank"><img class="img-responsive" src="assets/images/github-chart.png" alt="GitHub Contributions Chart" /></a></p>               
+                        <!--//Usage: http://caseyscarborough.com/projects/github-activity/ -->
+                        
+                        <div id="github-feed" class="ghfeed">
                         </div><!--//ghfeed-->
                         
                     </div><!--//secton-inner-->
@@ -385,7 +386,11 @@
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
     <script type="text/javascript" src="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.js"></script>
     <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.js"></script>            
+    <script type="text/javascript" src="assets/js/main.js"></script>       
+
+    <script type="text/javascript">
+		GitHubActivity.feed({ username: "marcsdev", selector: "#github-feed" });
+	</script>     
 </body>
 </html> 
 
