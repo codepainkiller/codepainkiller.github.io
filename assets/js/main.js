@@ -26,13 +26,13 @@ jQuery(document).ready(function($) {
     $("#rss-feeds").rss(
     
         //Change this to your own rss feeds
-        "http://feeds.feedburner.com/TechCrunch/startups",
+        "http://feeds.feedburner.com/Marcsdev",
         
         {
         // how many entries do you want?
         // default: 4
         // valid values: any integer
-        limit: 3,
+        limit: 4,
         
         // the effect, which is used to let the entries appear
         // default: 'show'
@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
     );
     
     /* Github Activity Feed - https://github.com/caseyscarborough/github-activity */
-    GitHubActivity.feed({ username: "caseyscarborough", selector: "#ghfeed" });
+    GitHubActivity.feed({ username: "marcsdev", selector: "#ghfeed" });
 
 
 });
