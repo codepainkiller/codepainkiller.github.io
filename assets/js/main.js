@@ -38,6 +38,8 @@ jQuery(document).ready(function($) {
         // default: 'show'
         // valid values: 'show', 'slide', 'slideFast', 'slideSynced', 'slideFastSynced'
         effect: 'slideFastSynced',
+
+        ssl: true,
         
         // outer template for the html transformation
         // default: "<ul>{entries}</ul>"
