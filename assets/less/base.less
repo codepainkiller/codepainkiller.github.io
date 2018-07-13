@@ -1,10 +1,7 @@
-@import "mixins.less";
-@import "theme-default.less";
-
 /* ======= Base ======= */
 
 body {
-    font-family: 'Lato', arial, sans-serif;   
+    font-family: 'Lato', arial, sans-serif;
     color: @text-color;
     background: @background;
     font-size: 16px;
@@ -26,6 +23,9 @@ a {
         color: darken(@color, 10%);
         color: darken(@color-2, 10%);
     }
+    &:focus {
+        text-decoration: none;
+    }
 }
 
 .btn, a.btn {
@@ -42,20 +42,23 @@ a {
     }
 }
 
-a.btn-cta-primary, .btn-cta-primary { 
-    background: @btn-color;
-    border: 1px solid @btn-color;
-    color: #fff;
+a.btn-cta-primary, .btn-cta-primary {
+    background: white;
+    border: 2px solid lighten(@btn-color, 10%);
+    color:lighten(@btn-color, 10%);
     font-weight:600;
-    text-transform: uppercase;
-    &:hover {
-        background: darken(@btn-color, 5%);
-        border: 1px solid darken(@btn-color, 5%);
-        color: #fff;
+    &:hover{
+        color: white;
+        background: lighten(@btn-color, 10%);
+    }
+    &:focus {
+        color:lighten(@btn-color, 10%);
+        background: white;
     }
 }
 
-a.btn-cta-secondary,  .btn-cta-secondary { 
+
+a.btn-cta-secondary,  .btn-cta-secondary {
     background: @btn-color-2;
     border: 1px solid @btn-color-2;
     color: #fff;
@@ -100,7 +103,7 @@ iframe {
 }
 */
 
-        
+
 /* ======= Header ======= */
 .header {
     padding: 30px 0;
@@ -116,7 +119,7 @@ iframe {
         width: 180px;
     }
     .profile-content {
-        
+
         .name {
             color: darken(@color, 20%);
             font-size: 38px;
@@ -159,7 +162,7 @@ iframe {
 }
 .section {
     margin-bottom: 30px;
-    
+
     .section-inner {
         background: #fff;
         padding: 30px;
@@ -182,7 +185,7 @@ iframe {
 
 /* About Section */
 .about {
-    
+
 }
 
 /* Latest Section */
@@ -201,10 +204,14 @@ iframe {
                 &:hover {
                     color: darken(@color, 10%);
                 }
-            }     
+            }
         }
-        .project-image:hover {
-            .opacity(0.8);           
+
+        .project-image {
+
+            &:hover {
+                .opacity(0.8);
+            }
         }
     }
     .divider {
@@ -241,7 +248,7 @@ iframe {
             width: 110px;
             height: 110px;
             overflow: hidden;
-            
+
             .text {
                 font-family: 'Montserrat', sans-serif;
                 position: relative;
@@ -253,7 +260,7 @@ iframe {
                 font-weight: bold;
                 text-align: center;
                 text-transform: uppercase;
-                color: #fff;           
+                color: #fff;
                 background-color: @btn-color-2;
                 .transform (rotate(45deg) translate3d(0,0,0));
                 &:before, &:after {
@@ -281,7 +288,7 @@ iframe {
         margin-bottom: 30px;
         .title {
             font-size: 16px;
-            margin-top: 0; 
+            margin-top: 0;
             margin-bottom:5px;
             line-height: 1.5;
             a {
@@ -291,8 +298,8 @@ iframe {
                 }
             }
         }
-        
-        
+
+
     }
 }
 
@@ -305,10 +312,10 @@ iframe {
             margin-top: 0;
             margin-bottom: 5px;
             line-height: 1.5;
-            
+
             .place {
                 color: @grey;
-                font-weight: normal; 
+                font-weight: normal;
                 a {
                     color: @grey;
                     &:hover {
@@ -320,12 +327,20 @@ iframe {
                 color: @grey;
                 font-weight: normal;
             }
-        }        
+        }
     }
 
 }
 
 /* Git section */
+.github-graph {
+    margin-bottom: 30px;
+    .js-calendar-graph-svg{
+        max-width:100%;
+    }
+
+}
+
 .ghfeed {
     height: 600px;
     .reset-box-sizing();
@@ -344,7 +359,7 @@ iframe {
     ul {
         margin-bottom: 0;
     }
-    
+
     li {
         margin-bottom: 15px;
         &:last-child {
@@ -369,7 +384,7 @@ iframe {
             margin-top: 0;
             margin-bottom: 10;
             .level-label {
-                color: lighten(@color, 30%);
+                color: lighten(@color, 15%);
                 font-size: 14px;
                 font-weight: 400;
                 font-family: "Lato", arial, sans-serif;
@@ -377,7 +392,7 @@ iframe {
                 right: 0;
                 top: 0;
             }
-            
+
         }
         .level-bar {
             height: 15px;
@@ -388,7 +403,7 @@ iframe {
             background: lighten(@color-2, 15%);
         }
     }
-    
+
 }
 
 /* Testimonials section */
@@ -403,12 +418,12 @@ iframe {
             font-size: 16px;
             border-left-color: lighten(@color-2, 30%);
             margin-bottom: 15px;
-            
+
             .fa {
                 color: lighten(@color-2, 20%);
                 margin-right: 15px;
             }
-            
+
         }
         .source {
             font-size: 14px;
@@ -487,7 +502,7 @@ iframe {
             margin-bottom: 0;
         }
     }
-    
+
 }
 
 /* List section */
@@ -529,16 +544,16 @@ iframe {
 
 .footer {
     background: darken(@color, 30%);
-    color: #fff;  
-    padding: 10px 0;  
-    
-    
+    color: #fff;
+    padding: 10px 0;
+
+
     .copyright {
         line-height: 1.6;
         color: lighten(@color, 15%);
-        font-size: 14px;       
-    }  
-    
+        font-size: 14px;
+    }
+
     a {
         color: #fff;
     }
